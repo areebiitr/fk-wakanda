@@ -4,4 +4,75 @@
 
 body {
     margin: 0;
+<<<<<<< HEAD
+=======
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.counter-btn {
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    width: 150px;
+    display: flex;
+
+    button {
+        border: 0;
+        flex: 1;
+        color: $blue;
+        font-size: 0.75em;
+        font-weight: bold;
+        background-color: $grey;
+        padding: 8px 16px;
+    }
+
+    span {
+        flex: 3;
+        text-align: center;
+    
+        display: inline-flex;
+        justify-content: center;
+        align-items:  center;
+    }
+}
+
+
+.item-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 40px;
+    width: 300px;
+
+    h3 {
+        font-weight: bold;
+    }
+
+    span {
+        margin: 0 5px;
+    }
+
+    .price-container {
+        width: 100%;
+    }
+
+    .old-price {
+        text-decoration: strikethrough;
+        color: $dark-grey;
+    }
+
+    .savings {
+        color: $green;
+    }
+
+    h4 {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    img {
+        height: 160px;
+        width: 160px;
+    }
+>>>>>>> 9e9d677df52537f2ebbd7d58183f0e5f01185e6b
 }
