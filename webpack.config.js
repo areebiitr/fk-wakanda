@@ -10,7 +10,7 @@ module.exports = {
         filename: "app.bundle.js",
         path: path.resolve(__dirname, "dist"),
     },
-
+    devtool: "source-map",
     mode: "development",
 
     module: {
@@ -26,6 +26,15 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
+                ]
+            },
+            {
+                test: /\.(svg|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {}
+                    }
                 ]
             }
         ]

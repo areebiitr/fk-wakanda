@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-
+import Shelf from './containers/Shelf'
 import './styles/index.scss';
+import "slick-carousel/slick/slick.css";
 
 class App extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             items: [
                 {
@@ -58,6 +58,9 @@ class App extends Component {
                     quantity: '500gm',
                 },
             ],
+            restockItems: [
+
+            ],
             basket: {}
         }
 
@@ -76,7 +79,13 @@ class App extends Component {
 
     render() {
         return (
-            <p>Wakanda Forever!</p>
+            <div>
+                <Shelf
+                    items={this.state.items}
+                    onChange={this.addItemToBasket}
+                />
+                <p>Wakanda Forever!</p>
+            </div>
         );
     }
 }

@@ -7,7 +7,7 @@ const Item = ({ item, quantity, onChange }) => {
         <div className="item-container">
             <img src={item.imageUrl} />
 
-            <h3>{item.title}</h3>
+            <h5>{item.title}</h5>
 
             <div className="price-container">
                 <span>₹{ item.currentValue }</span>
@@ -24,8 +24,8 @@ const Item = ({ item, quantity, onChange }) => {
                         )
                 }
             </div>
-            <div>
-                <h4>{ item.quantity }</h4>
+            <div class="button-container">
+                <h5>{ item.quantity }</h5>
                 
                 <CounterButton
                     style={{
