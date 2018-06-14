@@ -40,6 +40,9 @@ module.exports = {
         inline: true,
         historyApiFallback: true,
         stats: "errors-only",
+        proxy: {
+            "/api": "http://localhost:8080"
+        }
     },
 
     plugins: [
