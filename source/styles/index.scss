@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+@import 'variables';
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.counter-btn {
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    width: 150px;
+    display: flex;
+
+    button {
+        border: 0;
+        flex: 1;
+        color: $blue;
+        font-size: 0.75em;
+        font-weight: bold;
+        background-color: $grey;
+        padding: 8px 16px;
+    }
+
+    span {
+        flex: 3;
+        text-align: center;
+    
+        display: inline-flex;
+        justify-content: center;
+        align-items:  center;
+    }
 }
