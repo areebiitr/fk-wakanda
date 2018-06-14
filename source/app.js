@@ -4,8 +4,6 @@ import { render } from 'react-dom';
 import './styles/index.scss';
 
 class App extends Component {
-<<<<<<< HEAD
-=======
     constructor(props) {
         super(props);
 
@@ -76,7 +74,6 @@ class App extends Component {
         });
     }
 
->>>>>>> 9e9d677df52537f2ebbd7d58183f0e5f01185e6b
     render() {
         return (
             <p>Wakanda Forever!</p>
