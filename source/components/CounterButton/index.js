@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CounterButton = ({ value, onChange }) => {
+const CounterButton = ({ value, onChange, style }) => {
     function changeCount(operation) {
         if (operation === 'INC') {
             onChange(value + 1);
@@ -10,7 +10,7 @@ const CounterButton = ({ value, onChange }) => {
     }
 
     return (
-        <div className="counter-btn">
+        <div className="counter-btn" style={style}>
             {
                 value
                 ? (
