@@ -24,7 +24,7 @@ const Item = ({ item, quantity, onChange }) => {
                         )
                 }
             </div>
-            <div class="button-container">
+            <div className="button-container">
                 <h5>{ item.quantity }</h5>
                 
                 <CounterButton

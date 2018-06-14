@@ -20,7 +20,7 @@ export default class RefillStock extends React.Component {
                 />
                 <Slider {...settings}>
                 {
-                  this.props.items.map(item => <Item item={item} onChange={this.props.onChange} />)  
+                  this.props.items.map(item => <Item item={item} quantity={this.props.basket[item.id] || 0} onChange={this.props.onChange} />)  
                 }
                 </Slider>
             </div>

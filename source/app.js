@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import Shelf from './containers/Shelf'
 import './styles/index.scss';
 import "slick-carousel/slick/slick.css";
+import './components/CategoryTitle';
+import BasketItem from './components/BasketItem';
 
 class App extends Component {
     constructor(props) {
@@ -79,12 +81,36 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <Shelf
-                    items={this.state.items}
-                    onChange={this.addItemToBasket}
-                />
-                <p>Wakanda Forever!</p>
+            <div className="grocery-widget">
+                <div className="col-2">
+                    <Shelf
+                        items={this.state.items}
+                        basket={this.state.basket}
+                        onChange={this.addItemToBasket}
+                    />
+                </div>
+                <div className="col-1">
+                    <div className="paper basket-info">
+                        <h3>Your Basket</h3>
+                        {
+                            Object.keys(this.state.basket).map((item) => {
+                                return this.state.basket[item]
+                                    ? (
+                                        <BasketItem
+                                            item={
+                                                this.state.items.find((i) => {
+                                                    i.id === item.id
+                                                })
+                                            }
+                                        />
+                                    )
+                                    : (
+                                        null
+                                    )
+                            })
+                        }
+                    </div>
+                </div>
             </div>
         );
     }

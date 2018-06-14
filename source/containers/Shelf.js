@@ -6,7 +6,7 @@ export default class Shelf extends React.Component {
         return (
             <div className="shelf">
                 <Header />
-                <RefillStock items={this.props.items} onChange={this.props.onChange}/>
+                <RefillStock basket={this.props.basket} items={this.props.items} onChange={this.props.onChange}/>
             </div>
         )
     }
